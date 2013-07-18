@@ -5,7 +5,7 @@
 
 /**
  *
- * @author Guilherme
+ * @author Guilherme Miollo, Diogo Cardoso
  */
 public class Main {
 
