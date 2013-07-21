@@ -28,6 +28,7 @@ public class VendasJFrame extends javax.swing.JFrame {
         controller = new ThreadController(this);
         controller.runThread();
         setTitle("Venda de Ingressos");
+      //  bannerButton.
         
     }
     
@@ -58,6 +59,8 @@ public class VendasJFrame extends javax.swing.JFrame {
         vendaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        bannerButton.setBorderPainted(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setText("Em breve:");

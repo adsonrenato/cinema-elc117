@@ -75,6 +75,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JButton" name="bannerButton">
+      <Properties>
+        <Property name="borderPainted" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
