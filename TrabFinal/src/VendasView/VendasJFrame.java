@@ -20,6 +20,7 @@ public class VendasJFrame extends javax.swing.JFrame {
     public VendasJFrame() {
         initComponents();
         controller = new ThreadController(this);
+        controller.runThread();
         
     }
     public JButton getJbutton(int IdtoRun){
