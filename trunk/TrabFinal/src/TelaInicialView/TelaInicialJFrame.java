@@ -15,6 +15,7 @@ public class TelaInicialJFrame extends javax.swing.JFrame {
      */
     public TelaInicialJFrame() {
         initComponents();
+        setTitle("Gerenciador de Cinema");
     }
 
     /**
