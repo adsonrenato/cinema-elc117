@@ -15,10 +15,6 @@ public class VendasJFrame extends javax.swing.JFrame {
 
      private ThreadController controller = null;
 
-    @Override
-    public void setTitle(String title) {
-        super.setTitle(title); //To change body of generated methods, choose Tools | Templates.
-    }
      
     /**
      * Creates new form VendasJFrame
