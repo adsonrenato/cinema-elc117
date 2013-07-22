@@ -34,11 +34,12 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jtextNumero" min="-2" pref="106" max="-2" attributes="0"/>
-                          <Component id="vendaButton" min="-2" pref="92" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="vendaButton" pref="106" max="32767" attributes="0"/>
+                          <Component id="jtextNumero" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="relatorioButton" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -53,7 +54,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="filmeBox" min="-2" pref="36" max="-2" attributes="0"/>
-                      <EmptySpace pref="91" max="32767" attributes="0"/>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <Component id="relatorioButton" min="-2" pref="44" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -129,6 +132,14 @@
     <Component class="javax.swing.JButton" name="vendaButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Vender"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vendaButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="relatorioButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gerar Relatorio de Vendas"/>
       </Properties>
     </Component>
   </SubComponents>
