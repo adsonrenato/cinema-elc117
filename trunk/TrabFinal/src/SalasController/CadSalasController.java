@@ -15,8 +15,9 @@ public class CadSalasController {
     private CadSalaJFrame view;
     private CadSalas model;
     
-    public CadSalasController(CadSalaJFrame view){
+    public CadSalasController(CadSalaJFrame view, CadSalas model){
         this.view = view;
+        this.model = model;
     }
     
 }
