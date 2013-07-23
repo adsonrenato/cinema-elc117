@@ -4,6 +4,8 @@
  */
 package TelaInicialView;
 
+import FramesController.FramesController;
+
 /**
  *
  * @author Guilherme
@@ -13,8 +15,11 @@ public class TelaInicialJFrame extends javax.swing.JFrame {
     /**
      * Creates new form TelaInicialJFrame
      */
+    private FramesController controller = null;
+    
     public TelaInicialJFrame() {
         initComponents();
+        controller = new FramesController(this);
         setTitle("Gerenciador de Cinema");
     }
 
@@ -41,11 +46,26 @@ public class TelaInicialJFrame extends javax.swing.JFrame {
         jLabel1.setText("BEM VINDO ");
 
         salaButton.setText("Cadastrar Sala");
+        salaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salaButtonActionPerformed(evt);
+            }
+        });
 
         sessaoButton.setText("Cadastrar Sessão");
         sessaoButton.setToolTipText("");
+        sessaoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sessaoButtonActionPerformed(evt);
+            }
+        });
 
         vendaButton.setText("Vender Ingressos");
+        vendaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vendaButtonActionPerformed(evt);
+            }
+        });
 
         jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));
         jScrollPane1.setBorder(null);
@@ -99,6 +119,18 @@ public class TelaInicialJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void vendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendaButtonActionPerformed
+        controller.venda();
+    }//GEN-LAST:event_vendaButtonActionPerformed
+
+    private void sessaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessaoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sessaoButtonActionPerformed
+
+    private void salaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_salaButtonActionPerformed
 
     /**
      * @param args the command line arguments
