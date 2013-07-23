@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Guilherme
+ * @author Guilherme && Diogo
  */
 public class CadSalas {
     
