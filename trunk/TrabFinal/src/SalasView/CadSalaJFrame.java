@@ -36,6 +36,7 @@ public class CadSalaJFrame extends javax.swing.JFrame {
         cadastroButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(513, 313));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel1.setText("Numero da Sala :");
