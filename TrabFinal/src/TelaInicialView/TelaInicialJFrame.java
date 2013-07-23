@@ -125,11 +125,11 @@ public class TelaInicialJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_vendaButtonActionPerformed
 
     private void sessaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessaoButtonActionPerformed
-        // TODO add your handling code here:
+        controller.sessao();
     }//GEN-LAST:event_sessaoButtonActionPerformed
 
     private void salaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salaButtonActionPerformed
-        // TODO add your handling code here:
+        controller.sala();
     }//GEN-LAST:event_salaButtonActionPerformed
 
     /**
