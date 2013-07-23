@@ -44,8 +44,6 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Cadastrar nova sessão");
 
-        salasBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel2.setText("Nome do Filme :");
 
