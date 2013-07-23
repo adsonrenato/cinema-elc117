@@ -4,6 +4,8 @@
  */
 package FramesController;
 
+import SalasView.CadSalasJFrame;
+import SessoesView.CadSessaoJFrame;
 import TelaInicialView.TelaInicialJFrame;
 import VendasView.VendasJFrame;
 
@@ -22,8 +24,21 @@ public class FramesController {
     public void venda(){
         view.setVisible(false);
         VendasJFrame venda = new VendasJFrame();
-        venda.setVisible(true);
+        venda.setVisible(true);     
+    }
+    
+    public void sessao(){
+        view.setVisible(false);
+        CadSessaoJFrame sessao = new CadSessaoJFrame();
+        sessao.setVisible(true);
+    }
+    
+    public void sala(){
+        view.setVisible(false);
+        CadSalasJFrame salas = new CadSalasJFrame();
+        salas.setVisible(true);
         
+    
     }
     
     
