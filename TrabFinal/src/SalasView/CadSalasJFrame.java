@@ -4,6 +4,8 @@
  */
 package SalasView;
 
+import SalasController.CadSalasController;
+
 /**
  *
  * @author Guilherme
@@ -13,8 +15,11 @@ public class CadSalasJFrame extends javax.swing.JFrame {
     /**
      * Creates new form CadSalasJFrame
      */
+    CadSalasController controller = null;
+    
     public CadSalasJFrame() {
         initComponents();
+        controller = new CadSalasController(this, null);
         setTitle("Cadastro de Salas");
     }
 
@@ -118,7 +123,7 @@ public class CadSalasJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_lotacaoTextFieldActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
-        // TODO add your handling code here:
+        controller.voltar();
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
     /**
