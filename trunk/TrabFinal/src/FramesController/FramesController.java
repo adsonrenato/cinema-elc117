@@ -15,6 +15,9 @@ import VendasView.VendasJFrame;
  */
 public class FramesController {
     
+    CadSalasJFrame salas = new CadSalasJFrame();
+    CadSessaoJFrame sessao = new CadSessaoJFrame();
+    VendasJFrame venda = new VendasJFrame();
     private TelaInicialJFrame view;
     
     public FramesController(TelaInicialJFrame view){
@@ -23,19 +26,16 @@ public class FramesController {
     
     public void venda(){
         view.setVisible(false);
-        VendasJFrame venda = new VendasJFrame();
         venda.setVisible(true);     
     }
     
     public void sessao(){
         view.setVisible(false);
-        CadSessaoJFrame sessao = new CadSessaoJFrame();
         sessao.setVisible(true);
     }
     
     public void sala(){
         view.setVisible(false);
-        CadSalasJFrame salas = new CadSalasJFrame();
         salas.setVisible(true);
         
     
