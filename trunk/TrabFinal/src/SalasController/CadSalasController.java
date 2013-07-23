@@ -5,17 +5,17 @@
 package SalasController;
 
 import SalasModel.CadSalas;
-import SalasView.CadSalaJFrame;
+import SalasView.CadSalasJFrame;
 
 /**
  *
  * @author Guilherme
  */
 public class CadSalasController {
-    private CadSalaJFrame view;
+    private CadSalasJFrame view;
     private CadSalas model;
     
-    public CadSalasController(CadSalaJFrame view, CadSalas model){
+    public CadSalasController(CadSalasJFrame view, CadSalas model){
         this.view = view;
         this.model = model;
     }
