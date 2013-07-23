@@ -1,5 +1,8 @@
 
-import VendasView.VendasJFrame;
+import TelaInicialView.TelaInicialJFrame;
+
+
+
 
 /*
  * To change this template, choose Tools | Templates
@@ -17,7 +20,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        VendasJFrame a = new VendasJFrame();
-        a.setVisible(true);
+       TelaInicialJFrame inicio = new TelaInicialJFrame();
+       inicio.setVisible(true);
     }
 }
