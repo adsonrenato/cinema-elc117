@@ -6,6 +6,7 @@ package SalasController;
 
 import SalasModel.CadSalas;
 import SalasView.CadSalasJFrame;
+import TelaInicialView.TelaInicialJFrame;
 
 /**
  *
@@ -18,6 +19,12 @@ public class CadSalasController {
     public CadSalasController(CadSalasJFrame view, CadSalas model){
         this.view = view;
         this.model = model;
+    }
+    
+    public void voltar(){
+        view.setVisible(false);
+        TelaInicialJFrame inicio = new TelaInicialJFrame();
+        inicio.setVisible(true);
     }
     
 }
