@@ -11,7 +11,7 @@ import VendasView.VendasJFrame;
  * @author Guilherme Miollo, Diogo Cardoso
  */
 public class Main {
-
+ lalala
     /**
      * @param args the command line arguments
      */
