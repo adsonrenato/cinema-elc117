@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package VendasController;
+package SessoesModel;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,8 +13,8 @@ import java.io.IOException;
  *
  * @author Guilherme
  */
-public class Arquivos {
-     File arquivo = new File( "relatorio.csv" );
+public class ArquivoSessao {
+       File arquivo = new File( "Sessoes.csv" );
      
      public void criaarquivo(){
        try {  
@@ -30,26 +30,13 @@ public class Arquivos {
         }  
      }
      
-     public void inserenomescolunas(){
-         try{
-            FileWriter fw = new FileWriter(arquivo, false);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write("Filme, Sala, Data, Horario, Ingressos Vendidos");
-            
-            
-         }catch(IOException e){
-             e.printStackTrace();
-         }
-       
-         
-     }
      
-     public void insere(String filme, String sala, String data, String horario,int ingressos){
+     public void insere(String filme, String sala, String data, String horario){
        try{
             
-            FileWriter fw = new FileWriter( arquivo, true );
+            FileWriter fw = new FileWriter( arquivo, false );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write(filme+", "+sala+", "+data+", "+horario+", "+ingressos);
+            bw.write(filme+", "+sala+", "+data+", "+horario);
             bw.newLine();
             bw.close();
             fw.close();
