@@ -68,7 +68,7 @@ public class ArquivoSala {
         
       public ArrayList<Integer> lerVagas(){
         
-          ArrayList<Integer> vagas = new ArrayList<>();
+        ArrayList<Integer> vagas = new ArrayList<>();
         try{
               String array [] = new String[2];
               Integer ingressos;
