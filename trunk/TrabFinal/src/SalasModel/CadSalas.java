@@ -9,18 +9,13 @@ import java.util.ArrayList;
 /**
  *
  */
-public class CadSalas {
-    
+public class CadSalas {    
     ArquivoSala arquivo = new ArquivoSala();
     ArrayList<String> salas = new ArrayList<>();
     ArrayList<Integer> ingressos = new ArrayList<>();
     private String numerosala;
     private int lotacao;
-
-
-
-
-        
+    
      public void adicionarsala(String numerosala, int lotacao){
          this.numerosala = numerosala;
          this.lotacao = lotacao;
@@ -29,7 +24,6 @@ public class CadSalas {
          ingressos = arquivo.lerVagas();
          
      }
-    
     
     
     
