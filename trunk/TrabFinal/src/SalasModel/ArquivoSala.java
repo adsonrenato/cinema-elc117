@@ -23,9 +23,9 @@ public class ArquivoSala {
               
             boolean success = arquivo.createNewFile();  
             if (success) {  
-                // arquivo n existia e foi criado
+                System.out.println("no arquivo");
             } else {  
-                // arquivo ja existia
+                System.out.println("ja arquivo");
              }  
         } catch (IOException e) { 
             e.printStackTrace();
