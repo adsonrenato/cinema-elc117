@@ -32,11 +32,24 @@ public class ArquivoSala {
         }  
      }
     
+     public void zera(){
+          try{
+            
+            FileWriter fw = new FileWriter( arquivo, false );
+            BufferedWriter bw = new BufferedWriter( fw );
+            bw.write("");
+            bw.close();
+            fw.close();
+       }catch(IOException e){
+            e.printStackTrace();
+       }
+         
+     }
      
      public void insere(String sala, int lotacao){
        try{
             
-            FileWriter fw = new FileWriter( arquivo, false );
+            FileWriter fw = new FileWriter( arquivo, true );
             BufferedWriter bw = new BufferedWriter( fw );
             bw.write(sala+","+lotacao);
             bw.newLine();
