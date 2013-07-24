@@ -4,6 +4,8 @@
  */
 package SessoesView;
 
+import SessoesController.CadSessaoController;
+
 /**
  *
  * @author Guilherme
@@ -13,8 +15,11 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     /**
      * Creates new form CadSessaoJFrame
      */
+    private CadSessaoController controller = null;
+    
     public CadSessaoJFrame() {
         initComponents();
+        controller = new CadSessaoController(this,null);
         setTitle("Cadastro de Sessões");
     }
 
@@ -158,7 +163,7 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_dataTextFieldActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
-        // TODO add your handling code here:
+        controller.voltar();
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
     /**

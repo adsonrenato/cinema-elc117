@@ -5,6 +5,7 @@
 package VendasView;
 
 import ThreadController.ThreadController;
+import VendasController.VendasController;
 import javax.swing.JButton;
 
 /**
@@ -13,16 +14,18 @@ import javax.swing.JButton;
  */
 public class VendasJFrame extends javax.swing.JFrame {
 
-     private ThreadController controller = null;
-
+     private ThreadController controllerThread = null;
+     private VendasController controllerVendas = null; 
      
     /**
      * Creates new form VendasJFrame
      */
+     
     public VendasJFrame() {
         initComponents();
-        controller = new ThreadController(this);
-        controller.runThread();
+        controllerThread = new ThreadController(this);
+        controllerThread.runThread();
+        controllerVendas = new VendasController(this, null);
         setTitle("Venda de Ingressos");
       //  bannerButton.
         
@@ -55,7 +58,7 @@ public class VendasJFrame extends javax.swing.JFrame {
         vendaButton = new javax.swing.JButton();
         relatorioButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        cadastroButton = new javax.swing.JButton();
+        voltarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,11 +103,11 @@ public class VendasJFrame extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel4.setText("Compra de Ingressos");
 
-        cadastroButton.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
-        cadastroButton.setText("<< Voltar");
-        cadastroButton.addActionListener(new java.awt.event.ActionListener() {
+        voltarButton.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
+        voltarButton.setText("<< Voltar");
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastroButtonActionPerformed(evt);
+                voltarButtonActionPerformed(evt);
             }
         });
 
@@ -134,7 +137,7 @@ public class VendasJFrame extends javax.swing.JFrame {
                                 .addGap(70, 70, 70)
                                 .addComponent(vendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(64, 64, 64)
-                        .addComponent(cadastroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(voltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(bannerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
@@ -166,7 +169,7 @@ public class VendasJFrame extends javax.swing.JFrame {
                             .addComponent(vendaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(cadastroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(voltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(6, 6, 6)
                 .addComponent(bannerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -190,9 +193,9 @@ public class VendasJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_relatorioButtonActionPerformed
 
-    private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cadastroButtonActionPerformed
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
+        controllerVendas.voltar();
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,7 +233,6 @@ public class VendasJFrame extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bannerButton;
-    private javax.swing.JButton cadastroButton;
     private javax.swing.JComboBox filmeBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -239,6 +241,7 @@ public class VendasJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jtextNumero;
     private javax.swing.JButton relatorioButton;
     private javax.swing.JButton vendaButton;
+    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 
 

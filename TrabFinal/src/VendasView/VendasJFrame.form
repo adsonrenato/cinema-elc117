@@ -50,7 +50,7 @@
                           </Group>
                       </Group>
                       <EmptySpace min="64" pref="64" max="-2" attributes="0"/>
-                      <Component id="cadastroButton" min="-2" pref="160" max="-2" attributes="0"/>
+                      <Component id="voltarButton" min="-2" pref="160" max="-2" attributes="0"/>
                   </Group>
                   <Component id="bannerButton" min="-2" pref="493" max="-2" attributes="0"/>
               </Group>
@@ -94,7 +94,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="cadastroButton" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="voltarButton" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
         <Property name="text" type="java.lang.String" value="Compra de Ingressos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="cadastroButton">
+    <Component class="javax.swing.JButton" name="voltarButton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="14" style="2"/>
@@ -183,7 +183,7 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt; Voltar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastroButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
