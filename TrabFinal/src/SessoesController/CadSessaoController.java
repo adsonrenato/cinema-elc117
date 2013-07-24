@@ -29,7 +29,7 @@ public class CadSessaoController {
     }
     
     public void cadastrar(String sala,String filme,String data,String horario){
-        if(filme.equals("") || data.equals("") || horario.equals("      /      /")){
+        if(filme.equals("") || data.equals("") || horario.equals("")){
             
         }
         else{

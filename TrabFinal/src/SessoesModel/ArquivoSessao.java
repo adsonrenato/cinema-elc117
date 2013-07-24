@@ -35,7 +35,7 @@ public class ArquivoSessao {
             
             FileWriter fw = new FileWriter( arquivo, false );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write(filme+", "+sala+", "+data+", "+horario);
+            bw.write(filme+","+sala+","+data+","+horario);
             bw.newLine();
             bw.close();
             fw.close();
