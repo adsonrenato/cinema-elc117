@@ -63,9 +63,30 @@ public class ArquivoSala {
         }catch(IOException e){
             e.printStackTrace();
         }
-        
-        
         return salas;
+     } 
+        
+      public ArrayList<Integer> lerVagas(){
+        
+          ArrayList<Integer> vagas = new ArrayList<>();
+        try{
+              String array [] = new String[2];
+              Integer ingressos;
+              FileReader fr = new FileReader( arquivo );
+              BufferedReader br = new BufferedReader( fr );
+                while( br.ready() ){
+                    String linha = br.readLine();
+                    array = linha.split(",");
+                    ingressos = Integer.parseInt(array[1]);
+                    vagas.add(ingressos);    
+                }
+  
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        
+        return vagas;
     }
     
 }
