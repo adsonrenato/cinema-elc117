@@ -29,9 +29,12 @@ public class CadSalasController {
 
     
     public void cadastro(String sala,String lotacao){
+        int lot;
+        
         if(!sala.equals("") && !lotacao.equals("")){
-            Integer.parseInt(lotacao);
-            System.out.println(lotacao);
+            lot = Integer.parseInt(lotacao);
+            model.adicionarsala(sala, lot);
+            System.out.println(lot);
         }else {
             System.out.println("erro");
         }
