@@ -23,7 +23,7 @@ public class CadSessaoController {
     }
     
     public void voltar(){
-        view.setEnabled(false);
+        view.setVisible(false);
         TelaInicialJFrame inicio = new TelaInicialJFrame();
         inicio.setVisible(true);
     }
