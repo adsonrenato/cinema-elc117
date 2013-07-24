@@ -5,6 +5,7 @@
 package SalasView;
 
 import SalasController.CadSalasController;
+import SalasModel.CadSalas;
 
 /**
  *
@@ -15,10 +16,12 @@ public class CadSalasJFrame extends javax.swing.JFrame {
      * Creates new form CadSalasJFrame
      */
     CadSalasController controller = null;
+    CadSalas model = null;
     
     public CadSalasJFrame() {
         initComponents();
-        controller = new CadSalasController(this, null);
+        model = new CadSalas();
+        controller = new CadSalasController(this, model);
         setTitle("Cadastro de Salas");
     }
 
