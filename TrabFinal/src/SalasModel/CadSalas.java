@@ -23,6 +23,7 @@ public class CadSalas {
     
      public void adicionarsala(String numerosala, int lotacao){
          arquivo.criaarquivo();
+       //  arquivo.zera();
          zeraarray();
          salas = arquivo.lerSalas();
          ingressos = arquivo.lerVagas();
@@ -31,8 +32,9 @@ public class CadSalas {
              salas.add(numerosala);
              ingressos.add(lotacao);
          }
+         arquivo.zera();
          for(int i = 0;i<salas.size();i++){
-             arquivo.insere(salas.get(i), ingressos.get(i));
+             arquivo.insere(salas.get(i), ingressos.get(i));          
          }
          
      }
