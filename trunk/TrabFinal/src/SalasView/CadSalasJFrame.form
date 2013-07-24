@@ -51,7 +51,6 @@
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lotacaoTextField" min="-2" pref="120" max="-2" attributes="0"/>
                   <Component id="salaTextField" min="-2" pref="122" max="-2" attributes="0"/>
