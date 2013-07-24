@@ -8,7 +8,6 @@ import SessoesController.CadSessaoController;
 
 /**
  *
- * @author Guilherme
  */
 public class CadSessaoJFrame extends javax.swing.JFrame {
 

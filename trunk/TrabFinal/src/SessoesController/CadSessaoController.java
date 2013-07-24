@@ -10,7 +10,6 @@ import TelaInicialView.TelaInicialJFrame;
 
 /**
  *
- * @author Guilherme
  */
 public class CadSessaoController {
     

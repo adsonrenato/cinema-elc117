@@ -10,7 +10,6 @@ import VendasView.VendasJFrame;
 
 /**
  *
- * @author Guilherme
  */
 public class ThreadController {
     
@@ -25,11 +24,7 @@ public class ThreadController {
 
    
     public void runThread() {
-        // Create a new thread object
         thread = new Thread(new MyRunnable(view.getJbutton(0)));
-        // Set view to a new state
-        //view.setRunning(0);
-        // Start running thread0
         thread.start();
     }
 

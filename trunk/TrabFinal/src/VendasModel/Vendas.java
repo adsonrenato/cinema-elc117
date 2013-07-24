@@ -6,7 +6,6 @@ package VendasModel;
 
 /**
  *
- * @author Guilherme
  */
 public class Vendas {
     

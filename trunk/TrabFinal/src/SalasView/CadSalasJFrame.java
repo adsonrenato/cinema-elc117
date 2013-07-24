@@ -8,7 +8,6 @@ import SalasController.CadSalasController;
 
 /**
  *
- * @author Guilherme
  */
 public class CadSalasJFrame extends javax.swing.JFrame {
 
