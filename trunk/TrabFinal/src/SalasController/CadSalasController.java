@@ -29,12 +29,11 @@ public class CadSalasController {
 
     
     public void cadastro(String sala,String lotacao){
-        if(sala.equals("") || lotacao.equals("")){
-         
-        }else {
+        if(!sala.equals("") && !lotacao.equals("")){
             Integer.parseInt(lotacao);
-            System.out.println("asf");
-            
+            System.out.println(lotacao);
+        }else {
+            System.out.println("erro");
         }
         
     }
