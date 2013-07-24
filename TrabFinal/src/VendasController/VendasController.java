@@ -27,4 +27,14 @@ public class VendasController {
         inicio.setVisible(true);
     }
     
+    public void vender(String sessao, String ingressos){
+        if(ingressos.equals("") || ingressos.equals("0")){
+            
+        }else{
+            Integer.parseInt(ingressos);
+            System.out.println(ingressos);
+        }
+           
+    }
+    
 }

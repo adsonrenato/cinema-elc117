@@ -19,6 +19,7 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     public CadSessaoJFrame() {
         initComponents();
         controller = new CadSessaoController(this,null);
+        salasBox.addItem("ola");
         setTitle("Cadastro de Sessões");
     }
 
@@ -84,6 +85,11 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
 
         cadastroButton1.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
         cadastroButton1.setText("CADASTRAR");
+        cadastroButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastroButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel5.setText("Selecione a Sala :");
@@ -164,6 +170,10 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
         controller.voltar();
     }//GEN-LAST:event_cadastroButtonActionPerformed
+
+    private void cadastroButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButton1ActionPerformed
+        controller.cadastrar((String) salasBox.getSelectedItem(),filmeTextField.getText(),dataTextField.getText(),horaTextField.getText());
+    }//GEN-LAST:event_cadastroButton1ActionPerformed
 
     /**
      * @param args the command line arguments

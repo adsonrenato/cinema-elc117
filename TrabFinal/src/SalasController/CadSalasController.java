@@ -26,4 +26,17 @@ public class CadSalasController {
         inicio.setVisible(true);
     }
     
+
+    
+    public void cadastro(String sala,String lotacao){
+        if(sala.equals("") || lotacao.equals("")){
+         
+        }else {
+            Integer.parseInt(lotacao);
+            System.out.println("asf");
+            
+        }
+        
+    }
+    
 }
