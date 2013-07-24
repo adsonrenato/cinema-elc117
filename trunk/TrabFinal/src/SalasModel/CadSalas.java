@@ -23,6 +23,7 @@ public class CadSalas {
     
      public void adicionarsala(String numerosala, int lotacao){
          arquivo.criaarquivo();
+         zeraarray();
          salas = arquivo.lerSalas();
          ingressos = arquivo.lerVagas();
          
