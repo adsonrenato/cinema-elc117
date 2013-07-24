@@ -15,7 +15,7 @@ public class CadSalas {
     private int lotacao;
 
 
-    private ArrayList<String> salalist = new ArrayList<>();;
+    private ArrayList<String> salalist = new ArrayList<>();
 
     CadSalas(String numerosala,int lotacao){
         this.numerosala = numerosala;
