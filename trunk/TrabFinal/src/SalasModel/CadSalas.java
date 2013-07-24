@@ -31,7 +31,12 @@ public class CadSalas {
              salas.add(numerosala);
              ingressos.add(lotacao);
          }
+         for(int i = 0;i<salas.size();i++){
+             arquivo.insere(salas.get(i), ingressos.get(i));
+         }
+         
      }
+     
     
     public boolean verifica_existe(String numerosala){
         for(int i = 0; i < salas.size(); i++)
