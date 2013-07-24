@@ -17,25 +17,14 @@ public class CadSalas {
 
     private ArrayList<String> salalist = new ArrayList<>();
 
-    CadSalas(String numerosala,int lotacao){
-        this.numerosala = numerosala;
-        this.lotacao = lotacao;
+
         
-     }
-    
-    
-    public int getLotacao() {
-        return lotacao;
-    }
-    
-    public ArrayList<String> getList() {
-        return salalist;
-    }
-        
-     public void addsala(){
-         salalist.add(numerosala);
+     public void adicionarsala(){
+         
          
      }
+    
+    
     
     
     
