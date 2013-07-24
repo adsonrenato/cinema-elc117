@@ -14,6 +14,8 @@ public class CadSessao {
     ArquivoSessao arquivo = new ArquivoSessao();
     ArrayList<String> sessoes = new ArrayList<>();
     ArrayList<Integer> lotacao = new ArrayList<>();
+    private String sessao;
+    private int ingressos;
     
     public void zeraarray(){
         for(int i=0;i>sessoes.size();i++){
@@ -23,6 +25,8 @@ public class CadSessao {
     }
     
     public void adicionarSessao(String sessao, int ingressos){
+        this.sessao = sessao;
+        this.ingressos = ingressos;
         arquivo.criaarquivo();
         zeraarray();
         sessoes = arquivo.lerSessoes();
