@@ -28,11 +28,11 @@ public class VendasController {
     }
     
     public void vender(String sessao, String ingressos){
-        if(ingressos.equals("") || ingressos.equals("0")){
-            
-        }else{
+        if(!ingressos.equals("") && !ingressos.equals("0")){
             Integer.parseInt(ingressos);
             System.out.println(ingressos);
+        }else{
+            System.out.println("erro");
         }
            
     }
