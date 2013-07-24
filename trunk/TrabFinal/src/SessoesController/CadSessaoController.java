@@ -28,4 +28,13 @@ public class CadSessaoController {
         inicio.setVisible(true);
     }
     
+    public void cadastrar(String sala,String filme,String data,String horario){
+        if(filme.equals("") || data.equals("") || horario.equals("      /      /")){
+            
+        }
+        else{
+            System.out.println("ofasasfsaf");
+        }
+    }
+    
 }
