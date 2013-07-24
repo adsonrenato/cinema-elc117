@@ -14,7 +14,6 @@ import TelaInicialView.TelaInicialJFrame;
  * @author Guilherme Miollo, Diogo Cardoso
  */
 public class Main {
- 
     /**
      * @param args the command line arguments
      */
