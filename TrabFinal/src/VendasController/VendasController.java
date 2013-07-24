@@ -10,7 +10,6 @@ import VendasView.VendasJFrame;
 
 /**
  *
- * @author Guilherme
  */
 public class VendasController {
     

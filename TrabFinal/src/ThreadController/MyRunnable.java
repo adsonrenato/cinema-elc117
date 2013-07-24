@@ -8,7 +8,6 @@ import javax.swing.JButton;
 
 /**
  *
- * @author Guilherme
  */
 public class MyRunnable implements Runnable {
    

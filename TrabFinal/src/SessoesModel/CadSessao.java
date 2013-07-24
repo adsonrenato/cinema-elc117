@@ -6,7 +6,6 @@ package SessoesModel;
 
 /**
  *
- * @author Guilherme
  */
 public class CadSessao {
     

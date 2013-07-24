@@ -11,7 +11,6 @@ import java.io.IOException;
 
 /**
  *
- * @author Guilherme
  */
 public class ArquivoSessao {
        File arquivo = new File( "Sessoes.csv" );

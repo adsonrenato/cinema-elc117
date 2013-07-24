@@ -8,7 +8,6 @@ import FramesController.FramesController;
 
 /**
  *
- * @author Guilherme
  */
 public class TelaInicialJFrame extends javax.swing.JFrame {
 
