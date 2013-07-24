@@ -27,7 +27,7 @@ public class CadSalas {
          salas = arquivo.lerSalas();
          ingressos = arquivo.lerVagas();
          
-         if(verifica_existe(numerosala)){
+         if(!verifica_existe(numerosala)){
              salas.add(numerosala);
              ingressos.add(lotacao);
          }
