@@ -47,12 +47,12 @@ public class ArquivoSessao {
          
      }
      
-     public void insere(String sessao, int ingressos){
+     public void insere(String sessao, int ingressos,int vendidos){
        try{
             
             FileWriter fw = new FileWriter( arquivo, true );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write(sessao+","+ingressos);
+            bw.write(sessao+","+ingressos+","+vendidos);
             bw.newLine();
             bw.close();
             fw.close();
@@ -96,12 +96,35 @@ public class ArquivoSessao {
                     vagas = Integer.parseInt(array[1]);
                     lotacao.add(vagas);    
                 }
-  
+              
         }catch(IOException e){
             e.printStackTrace();
         }
         
         return lotacao;
+       }
+       
+       public ArrayList<Integer> lervendidos(){
+       
+           ArrayList<Integer> ingressos = new ArrayList<>();
+        
+        try{
+              String array [] = new String[2];
+              Integer vendidos;
+              FileReader fr = new FileReader( arquivo );
+              BufferedReader br = new BufferedReader( fr );
+                while( br.ready() ){
+                    String linha = br.readLine();
+                    array = linha.split(",");
+                    vendidos = Integer.parseInt(array[1]);
+                    ingressos.add(vendidos);    
+                }
+              
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        return ingressos;
        }
        
     
