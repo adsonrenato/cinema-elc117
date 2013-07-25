@@ -37,7 +37,7 @@ public class ArquivoRelatorio {
      public void insere(String sessao,int ingressos){
        try{
             
-            FileWriter fw = new FileWriter( arquivo, true );
+            FileWriter fw = new FileWriter( arquivo, false );
             BufferedWriter bw = new BufferedWriter( fw );
             bw.write(sessao+","+ingressos);
             bw.newLine();
