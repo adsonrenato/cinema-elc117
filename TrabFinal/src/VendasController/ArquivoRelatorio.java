@@ -30,19 +30,9 @@ public class ArquivoRelatorio {
         }  
      }
      
-     public void inserenomescolunas(){
-         try{
-            FileWriter fw = new FileWriter(arquivo, false);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write("Filme, Sala, Data, Horario, Ingressos Vendidos");
-            
-            
-         }catch(IOException e){
-             e.printStackTrace();
-         }
-       
+
          
-     }
+     
      
      public void insere(String sessao,int ingressos){
        try{
