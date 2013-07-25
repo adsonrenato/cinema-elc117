@@ -4,9 +4,12 @@
  */
 package SessoesController;
 
+import SalasModel.ArquivoSala;
 import SessoesModel.CadSessao;
 import SessoesView.CadSessaoJFrame;
 import TelaInicialView.TelaInicialJFrame;
+import java.util.ArrayList;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -36,6 +39,18 @@ public class CadSessaoController {
         else{
             System.out.println("erro");
         }
+    }
+    
+    public void addComboBox(){
+        JComboBox salaBox;
+        ArrayList<String> salalist = new ArrayList<>();
+        salaBox = view.getSalaBox();
+        ArquivoSala salas = new ArquivoSala();
+        salalist = salas.lerSalas();
+        for(int i = 0;i<salalist.size();i++){
+            salaBox.addItem(salalist.get(i));
+        }
+        
     }
     
 }
