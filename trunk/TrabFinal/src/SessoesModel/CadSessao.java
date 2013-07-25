@@ -26,7 +26,7 @@ public class CadSessao {
         }
     }
     
-    public void adicionarSessao(String sessao){
+    public void adicionarSessao(String sessao, String sala){
         salas = arquivo_sala.lerSalas();
         ingressos = arquivo_sala.lerVagas();
         int ingresso = 0;
@@ -47,7 +47,7 @@ public class CadSessao {
         }
         
         for(int i = 0; i < salas.size(); i++){
-            if(salas.get(i).equals(sessao)){
+            if(salas.get(i).equals(sala)){
                 ingresso = ingressos.get(i);
                 break;
             }
@@ -57,9 +57,9 @@ public class CadSessao {
         
     }
     
-    public boolean verifica_existe(String numerosala){
+    public boolean verifica_existe(String sessao){
         for(int i = 0; i < sessoes.size(); i++)
-            if(numerosala.equals(sessoes.get(i)))
+            if(sessao.equals(sessoes.get(i)))
                 return true;
         
         return false;
