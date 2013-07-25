@@ -17,9 +17,10 @@ import javax.swing.JComboBox;
  */
 public class VendasController {
     
-    ArquivoSessao arquivo_sessoes = new ArquivoSessao();
-    ArrayList<String> sessoes = new ArrayList<>();
-    ArrayList<Integer> lotacao = new ArrayList<>();
+    private ArquivoSessao arquivo_sessoes = new ArquivoSessao();
+    private ArrayList<String> sessoes = new ArrayList<>();
+    private ArrayList<Integer> lotacao = new ArrayList<>();
+    private ArrayList<Integer> vendidos = new ArrayList<>();
     private VendasJFrame view;
     private Vendas model;
     
@@ -43,6 +44,8 @@ public class VendasController {
             
             sessoes = arquivo_sessoes.lerSessoes();
             lotacao = arquivo_sessoes.lerlotacao();
+            vendidos = arquivo_sessoes.lervendidos();
+            
             
             for(i = 0; i < sessoes.size(); i++){
                 if(sessoes.get(i).equals(sessao)){
@@ -52,7 +55,7 @@ public class VendasController {
                         arquivo_sessoes.zera();
 
                         for(i = 0; i < lotacao.size(); i++){
-                            arquivo_sessoes.insere(sessoes.get(i), lotacao.get(i));
+                            arquivo_sessoes.insere(sessoes.get(i), lotacao.get(i),vendidos.get(i));
                         }
                     } else {
                         System.out.println("erro");
