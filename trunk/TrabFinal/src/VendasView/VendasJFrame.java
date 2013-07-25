@@ -214,7 +214,7 @@ public class VendasJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_vendaButtonActionPerformed
 
     private void relatorioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_relatorioButtonActionPerformed
-        // TODO add your handling code here:
+        controllerVendas.relatorio();
     }//GEN-LAST:event_relatorioButtonActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
