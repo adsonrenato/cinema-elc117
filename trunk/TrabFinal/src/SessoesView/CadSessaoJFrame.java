@@ -5,6 +5,7 @@
 package SessoesView;
 
 import SessoesController.CadSessaoController;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -23,6 +24,9 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
         setTitle("Cadastro de Sessões");
     }
 
+    public JComboBox getSalaBox(){
+        return salasBox;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
