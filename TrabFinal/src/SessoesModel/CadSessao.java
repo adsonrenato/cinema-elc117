@@ -49,6 +49,7 @@ public class CadSessao {
         for(int i = 0; i < salas.size(); i++){
             if(salas.get(i).equals(sessao)){
                 ingresso = ingressos.get(i);
+                break;
             }
         }
         
