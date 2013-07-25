@@ -18,7 +18,7 @@ import javax.swing.JComboBox;
 public class VendasController {
     
     private ArquivoSessao arquivo_sessoes = new ArquivoSessao();
-    
+    private ArquivoRelatorio relatorio = new ArquivoRelatorio();
     private ArrayList<String> sessoes = new ArrayList<>();
     private ArrayList<Integer> lotacao = new ArrayList<>();
     private ArrayList<Integer> vendidos = new ArrayList<>();
@@ -82,4 +82,17 @@ public class VendasController {
        }
     
     }
+    public void relatorio(){
+        
+            sessoes = arquivo_sessoes.lerSessoes();
+            vendidos = arquivo_sessoes.lerVendidos();
+            relatorio.criaarquivo();
+            for(int i = 0;i<sessoes.size();i++){
+                    relatorio.insere(sessoes.get(i), vendidos.get(i));
+            }
+        
+            
+        
+    }
+    
 }
