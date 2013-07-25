@@ -64,7 +64,7 @@ public class ArquivoSessao {
        public ArrayList<String> lerSessoes(){
         ArrayList<String> sessao = new ArrayList<>();
         try{
-              String array [] = new String[2];
+              String array [] = new String[3];
               
               FileReader fr = new FileReader( arquivo );
               BufferedReader br = new BufferedReader( fr );
@@ -86,7 +86,7 @@ public class ArquivoSessao {
            ArrayList<Integer> lotacao = new ArrayList<>();
         
         try{
-              String array [] = new String[2];
+              String array [] = new String[3];
               Integer vagas;
               FileReader fr = new FileReader( arquivo );
               BufferedReader br = new BufferedReader( fr );
@@ -109,14 +109,14 @@ public class ArquivoSessao {
            ArrayList<Integer> ingressos = new ArrayList<>();
         
         try{
-              String array [] = new String[2];
+              String array [] = new String[3];
               Integer vendidos;
               FileReader fr = new FileReader( arquivo );
               BufferedReader br = new BufferedReader( fr );
                 while( br.ready() ){
                     String linha = br.readLine();
                     array = linha.split(",");
-                    vendidos = Integer.parseInt(array[1]);
+                    vendidos = Integer.parseInt(array[2]);
                     ingressos.add(vendidos);    
                 }
               
