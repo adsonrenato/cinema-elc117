@@ -4,8 +4,8 @@
  */
 package VendasModel;
 
+import Main.Avisos;
 import SessoesModel.ArquivoSessao;
-import VendasController.ArquivoRelatorio;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Vendas {
     
     private ArquivoSessao arquivo_sessoes = new ArquivoSessao();
+    private Avisos aviso = new Avisos();
+    
     private ArrayList<String> sessoes = new ArrayList<>();
     private ArrayList<Integer> lotacao = new ArrayList<>();
     private ArrayList<Integer> vendidos = new ArrayList<>();
@@ -37,8 +39,9 @@ public class Vendas {
                         for(i = 0; i < lotacao.size(); i++){
                             arquivo_sessoes.insere(sessoes.get(i), lotacao.get(i),vendidos.get(i));
                         }
+                        aviso.message("Venda registrada com sucesso");
                     } else {
-                        System.out.println("erro");
+                        aviso.message("A sessão selecionada está com os ingressos esgotados");
                     }
                     break;
                 }

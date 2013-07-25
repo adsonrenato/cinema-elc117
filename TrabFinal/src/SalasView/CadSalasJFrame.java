@@ -6,6 +6,7 @@ package SalasView;
 
 import SalasController.CadSalasController;
 import SalasModel.CadSalas;
+import javax.swing.JOptionPane;
 
 /**
  *
