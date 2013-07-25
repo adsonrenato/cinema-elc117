@@ -4,18 +4,18 @@
  */
 package ThreadController;
 
-import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
  */
 public class MyRunnable implements Runnable {
    
-    private JButton banner;
+    private JLabel banner;
     private static final int SLEEP_MILLIS = 1000;
     
 
-    public MyRunnable(JButton banner) {
+    public MyRunnable(JLabel banner) {
         this.banner = banner;
     }
     
