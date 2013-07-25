@@ -30,6 +30,13 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     public JComboBox getSalaBox(){
         return salasBox;
     }
+    
+    public void setInicio(){
+     
+        filmeTextField.setText("");
+        dataTextField.setText("");
+        horaTextField.setText("");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
