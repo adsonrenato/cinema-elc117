@@ -9,4 +9,8 @@ package VendasModel;
  */
 public class Vendas {
     
+    public void relatorio(){
+        
+    }
+    
 }
