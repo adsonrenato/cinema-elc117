@@ -43,7 +43,7 @@ public class CadSessao {
         arquivo.zera();
         
         for(int i = 0;i<sessoes.size();i++){
-            arquivo.insere(sessoes.get(i), lotacao.get(i));          
+            arquivo.insere(sessoes.get(i), lotacao.get(i));
         }
         
         for(int i = 0; i < salas.size(); i++){
