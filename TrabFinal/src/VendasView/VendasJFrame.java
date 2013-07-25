@@ -7,6 +7,7 @@ package VendasView;
 import ThreadController.ThreadController;
 import VendasController.VendasController;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -38,6 +39,10 @@ public class VendasJFrame extends javax.swing.JFrame {
     }
        return null;
     }
+    
+    public JComboBox getSessoesBox(){
+        return sessoesBox;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,7 +58,7 @@ public class VendasJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jtextNumero = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        filmeBox = new javax.swing.JComboBox();
+        sessoesBox = new javax.swing.JComboBox();
         vendaButton = new javax.swing.JButton();
         relatorioButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -80,9 +85,9 @@ public class VendasJFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel3.setText("Sessão :");
 
-        filmeBox.addActionListener(new java.awt.event.ActionListener() {
+        sessoesBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filmeBoxActionPerformed(evt);
+                sessoesBoxActionPerformed(evt);
             }
         });
 
@@ -125,7 +130,7 @@ public class VendasJFrame extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(filmeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sessoesBox, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -161,7 +166,7 @@ public class VendasJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(70, 70, 70)
-                                .addComponent(filmeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(sessoesBox, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
@@ -190,12 +195,12 @@ public class VendasJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtextNumeroActionPerformed
 
-    private void filmeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filmeBoxActionPerformed
+    private void sessoesBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessoesBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_filmeBoxActionPerformed
+    }//GEN-LAST:event_sessoesBoxActionPerformed
 
     private void vendaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendaButtonActionPerformed
-        controllerVendas.vender((String) filmeBox.getSelectedItem(), jtextNumero.getText());
+        controllerVendas.vender((String) sessoesBox.getSelectedItem(), jtextNumero.getText());
     }//GEN-LAST:event_vendaButtonActionPerformed
 
     private void relatorioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_relatorioButtonActionPerformed
@@ -242,7 +247,6 @@ public class VendasJFrame extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bannerButton;
-    private javax.swing.JComboBox filmeBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -250,6 +254,7 @@ public class VendasJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jtextNumero;
     private javax.swing.JButton relatorioButton;
+    private javax.swing.JComboBox sessoesBox;
     private javax.swing.JButton vendaButton;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
