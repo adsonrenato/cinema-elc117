@@ -36,7 +36,7 @@ public class VendasJFrame extends javax.swing.JFrame {
     }
     
     public void setInicio(){
-        jtextNumero.setText("");
+        jtextNumero.setText("1");
     }
     
 
