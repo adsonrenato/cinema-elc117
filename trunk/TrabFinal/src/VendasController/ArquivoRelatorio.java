@@ -30,14 +30,24 @@ public class ArquivoRelatorio {
         }  
      }
      
-
+     public void zeraRelatorio(){
+          try{  
+            FileWriter fw = new FileWriter( arquivo, false );
+            BufferedWriter bw = new BufferedWriter( fw );
+            bw.write("");
+            bw.close();
+            fw.close();
+       }catch(IOException e){
+            e.printStackTrace();
+       }
+     }
          
      
      
      public void insere(String sessao,int ingressos){
        try{
             
-            FileWriter fw = new FileWriter( arquivo, false );
+            FileWriter fw = new FileWriter( arquivo, true );
             BufferedWriter bw = new BufferedWriter( fw );
             bw.write(sessao+","+ingressos);
             bw.newLine();
