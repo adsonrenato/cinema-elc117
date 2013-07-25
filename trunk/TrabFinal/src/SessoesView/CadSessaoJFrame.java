@@ -20,8 +20,8 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     public CadSessaoJFrame() {
         initComponents();
         controller = new CadSessaoController(this,null);
-        salasBox.addItem("ola");
         setTitle("Cadastro de Sessões");
+        controller.addComboBox();
     }
 
     public JComboBox getSalaBox(){
