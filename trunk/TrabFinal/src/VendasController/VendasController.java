@@ -19,7 +19,6 @@ public class VendasController {
     private ArquivoSessao arquivo_sessoes = new ArquivoSessao();
     private ArquivoRelatorio relatorio = new ArquivoRelatorio();
     private ArrayList<String> sessoes = new ArrayList<>();
-    private ArrayList<Integer> lotacao = new ArrayList<>();
     private ArrayList<Integer> vendidos = new ArrayList<>();
     
     private VendasJFrame view;
@@ -37,32 +36,13 @@ public class VendasController {
     }
     
     public void vender(String sessao, String ingressos){
-        int ing,i;
+        int ing;
         
         if(!ingressos.equals("") && !ingressos.equals("0") && !sessao.equals("Sessões")){
             ing = Integer.parseInt(ingressos);
             System.out.println(ing);
-            
-            sessoes = arquivo_sessoes.lerSessoes();
-            lotacao = arquivo_sessoes.lerlotacao();
-            vendidos = arquivo_sessoes.lerVendidos();
-            
-            for(i = 0; i < sessoes.size(); i++){
-                if(sessoes.get(i).equals(sessao)){
-                    if(lotacao.get(i) >= vendidos.get(i)+ing){
-                        vendidos.set(i, vendidos.get(i)+ing);
-            
-                        arquivo_sessoes.zera();
+            model.vender(sessao, ing);
 
-                        for(i = 0; i < lotacao.size(); i++){
-                            arquivo_sessoes.insere(sessoes.get(i), lotacao.get(i),vendidos.get(i));
-                        }
-                    } else {
-                        System.out.println("erro");
-                    }
-                    break;
-                }
-            }
         }else{
             System.out.println("erro");
         }
@@ -83,12 +63,12 @@ public class VendasController {
     
     }
     public void relatorio(){
-        
             sessoes = arquivo_sessoes.lerSessoes();
             vendidos = arquivo_sessoes.lerVendidos();
             relatorio.criaarquivo();
+            relatorio.zeraRelatorio();
             for(int i = 0;i<sessoes.size();i++){
-                    relatorio.insere(sessoes.get(i), vendidos.get(i));
+                  relatorio.insere(sessoes.get(i), vendidos.get(i));
             }
         
             
