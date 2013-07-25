@@ -5,6 +5,7 @@
 package SessoesView;
 
 import SessoesController.CadSessaoController;
+import SessoesModel.CadSessao;
 import javax.swing.JComboBox;
 
 /**
@@ -16,10 +17,12 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
      * Creates new form CadSessaoJFrame
      */
     private CadSessaoController controller = null;
+    private CadSessao model = null;
     
     public CadSessaoJFrame() {
         initComponents();
-        controller = new CadSessaoController(this,null);
+        model = new CadSessao();
+        controller = new CadSessaoController(this,model);
         setTitle("Cadastro de Sessões");
         controller.addComboBox();
     }

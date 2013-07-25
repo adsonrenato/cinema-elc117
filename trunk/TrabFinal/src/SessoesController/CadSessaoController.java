@@ -36,8 +36,8 @@ public class CadSessaoController {
         String sessao;
         if(!filme.equals("") && !data.equals("") && !horario.equals("")){
            sessao = sala+"-"+filme+"-"+data+"-"+horario;
-           model.adicionarSessao(sessao);
            System.out.println(sessao);
+           model.adicionarSessao(sessao);
         }
         else{
             System.out.println("erro");
