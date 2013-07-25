@@ -27,6 +27,7 @@ public class CadSessao {
     }
     
     public void adicionarSessao(String sessao, String sala){
+        int i;
         salas = arquivo_sala.lerSalas();
         ingressos = arquivo_sala.lerVagas();
         int ingresso = 0;
@@ -42,11 +43,11 @@ public class CadSessao {
         
         arquivo.zera();
         
-        for(int i = 0;i<sessoes.size();i++){
+        for(i = 0; i < lotacao.size(); i++){
             arquivo.insere(sessoes.get(i), lotacao.get(i));
         }
         
-        for(int i = 0; i < salas.size(); i++){
+        for(i = 0; i < salas.size(); i++){
             if(salas.get(i).equals(sala)){
                 ingresso = ingressos.get(i);
                 break;
