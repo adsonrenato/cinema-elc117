@@ -35,7 +35,7 @@ public class CadSessaoController {
     public void cadastrar(String sala,String filme,String data,String horario){
         String sessao;
         if(!filme.equals("") && !data.equals("") && !horario.equals("")){
-           sessao = sala+"-"+filme+"-"+data+"-"+horario;
+           sessao = "Sala:"+sala+"-"+"Filme:"+filme+"-"+"Data:"+data+"-"+"horario:"+horario;
            System.out.println(sessao);
            model.adicionarSessao(sessao,sala);
         }
