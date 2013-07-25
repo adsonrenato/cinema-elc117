@@ -24,7 +24,7 @@ public class ThreadController {
 
    
     public void runThread() {
-        thread = new Thread(new MyRunnable(view.getJbutton(0)));
+        thread = new Thread(new MyRunnable(view.getJlabel()));
         thread.start();
     }
 
