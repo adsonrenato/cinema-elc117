@@ -47,7 +47,7 @@ public class VendasController {
             for(i = 0; i < sessoes.size(); i++){
                 if(sessoes.get(i).equals(sessao)){
                     if(lotacao.get(i) >= ing){
-                        lotacao.get(i) -= ing;
+                        lotacao.set(i, lotacao.get(i)-ing);
                     }
                 }
             }
@@ -62,8 +62,7 @@ public class VendasController {
         ArrayList<String> sessaolist = new ArrayList<>();
         
         salaBox = view.getSessoesBox();
-        this.sessoes = new ArquivoSessao();
-        sessaolist = sessoes.lerSessoes();
+        sessaolist = arquivo_sessoes.lerSessoes();
         for(int i = 0;i<sessaolist.size();i++){
             salaBox.addItem(sessaolist.get(i));
         
