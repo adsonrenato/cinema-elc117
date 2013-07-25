@@ -86,6 +86,8 @@ public class VendasJFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel3.setText("Sessão :");
 
+        sessoesBox.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
+        sessoesBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sessões" }));
         sessoesBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sessoesBoxActionPerformed(evt);
