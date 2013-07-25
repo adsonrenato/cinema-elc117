@@ -48,7 +48,16 @@ public class VendasController {
                 if(sessoes.get(i).equals(sessao)){
                     if(lotacao.get(i) >= ing){
                         lotacao.set(i, lotacao.get(i)-ing);
+            
+                        arquivo_sessoes.zera();
+
+                        for(i = 0; i < lotacao.size(); i++){
+                            arquivo_sessoes.insere(sessoes.get(i), lotacao.get(i));
+                        }
+                    } else {
+                        System.out.println("erro");
                     }
+                    break;
                 }
             }
         }else{
