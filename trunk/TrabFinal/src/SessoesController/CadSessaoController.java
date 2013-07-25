@@ -42,6 +42,7 @@ public class CadSessaoController {
         else{
             System.out.println("erro");
         }
+        view.setInicio();
     }
     
     public void addComboBox(){
