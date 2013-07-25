@@ -44,12 +44,12 @@ public class ArquivoRelatorio {
          
      }
      
-     public void insere(String filme, String sala, String data, String horario,int ingressos){
+     public void insere(String sessao,int ingressos){
        try{
             
             FileWriter fw = new FileWriter( arquivo, true );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write(filme+", "+sala+", "+data+", "+horario+", "+ingressos);
+            bw.write(sessao+","+ingressos);
             bw.newLine();
             bw.close();
             fw.close();
