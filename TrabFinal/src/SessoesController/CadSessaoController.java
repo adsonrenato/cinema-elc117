@@ -16,6 +16,7 @@ import javax.swing.JComboBox;
  */
 public class CadSessaoController {
     
+    private ArquivoSala salas;
     private CadSessaoJFrame view;
     private CadSessao model;
     
@@ -44,8 +45,9 @@ public class CadSessaoController {
     public void addComboBox(){
         JComboBox salaBox;
         ArrayList<String> salalist = new ArrayList<>();
+        
         salaBox = view.getSalaBox();
-        ArquivoSala salas = new ArquivoSala();
+        this.salas = new ArquivoSala();
         salalist = salas.lerSalas();
         for(int i = 0;i<salalist.size();i++){
             salaBox.addItem(salalist.get(i));
