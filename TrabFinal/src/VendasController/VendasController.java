@@ -4,7 +4,6 @@
  */
 package VendasController;
 
-import SalasModel.ArquivoSala;
 import SessoesModel.ArquivoSessao;
 import TelaInicialView.TelaInicialJFrame;
 import VendasModel.Vendas;
@@ -40,7 +39,7 @@ public class VendasController {
     public void vender(String sessao, String ingressos){
         int ing,i;
         
-        if(!ingressos.equals("") && !ingressos.equals("0")){
+        if(!ingressos.equals("") && !ingressos.equals("0") && !sessao.equals("Sessões")){
             ing = Integer.parseInt(ingressos);
             System.out.println(ing);
             
