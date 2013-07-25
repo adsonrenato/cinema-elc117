@@ -4,6 +4,7 @@
  */
 package SessoesController;
 
+import Main.Avisos;
 import SalasModel.ArquivoSala;
 import SessoesModel.CadSessao;
 import SessoesView.CadSessaoJFrame;
@@ -19,6 +20,7 @@ public class CadSessaoController {
     private ArquivoSala salas;
     private CadSessaoJFrame view;
     private CadSessao model;
+    private Avisos aviso =  new Avisos();
     
     public CadSessaoController(CadSessaoJFrame view, CadSessao model){
         this.view = view;
@@ -40,7 +42,7 @@ public class CadSessaoController {
            model.adicionarSessao(sessao,sala);
         }
         else{
-            System.out.println("erro");
+            aviso.message("Prencha todos campos e selecione a sala por favor");
         }
         view.setInicio();
     }

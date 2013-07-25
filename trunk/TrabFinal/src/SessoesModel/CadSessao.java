@@ -4,6 +4,7 @@
  */
 package SessoesModel;
 
+import Main.Avisos;
 import java.util.ArrayList;
 import SalasModel.ArquivoSala;
 
@@ -14,6 +15,7 @@ public class CadSessao {
     
     private ArquivoSessao arquivo = new ArquivoSessao();
     private ArquivoSala arquivo_sala = new ArquivoSala();
+    private Avisos aviso = new Avisos();
     
     private ArrayList<String> salas = new ArrayList<>();
     private ArrayList<Integer> ingressos = new ArrayList<>();
@@ -58,6 +60,9 @@ public class CadSessao {
             }
 
             arquivo.insere(sessao, ingresso, 0);
+            aviso.message("Sessão cadastrada com sucesso");
+        }else{
+            aviso.message("Essa sessão já esta cadastrada");
         }
     }
     

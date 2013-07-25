@@ -4,6 +4,7 @@
  */
 package SalasController;
 
+import Main.Avisos;
 import SalasModel.CadSalas;
 import SalasView.CadSalasJFrame;
 import TelaInicialView.TelaInicialJFrame;
@@ -14,6 +15,7 @@ import TelaInicialView.TelaInicialJFrame;
 public class CadSalasController {
     private CadSalasJFrame view;
     private CadSalas model;
+    private Avisos aviso = new Avisos();
     
     public CadSalasController(CadSalasJFrame view, CadSalas model){
         this.view = view;
@@ -34,9 +36,9 @@ public class CadSalasController {
         if(!sala.equals("") && !lotacao.equals("")){
             lot = Integer.parseInt(lotacao);
             model.adicionarsala(sala, lot);
-            System.out.println(lot);
         }else {
-            System.out.println("erro");
+          
+            aviso.message("Prencha todos campos por favor");
         }
         
     }

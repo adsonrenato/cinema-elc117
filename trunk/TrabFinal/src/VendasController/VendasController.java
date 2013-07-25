@@ -4,6 +4,7 @@
  */
 package VendasController;
 
+import Main.Avisos;
 import SessoesModel.ArquivoSessao;
 import TelaInicialView.TelaInicialJFrame;
 import VendasModel.Vendas;
@@ -18,6 +19,8 @@ public class VendasController {
     
     private ArquivoSessao arquivo_sessoes = new ArquivoSessao();
     private ArquivoRelatorio relatorio = new ArquivoRelatorio();
+    private Avisos aviso = new Avisos();
+    
     private ArrayList<String> sessoes = new ArrayList<>();
     private ArrayList<Integer> vendidos = new ArrayList<>();
     
@@ -44,7 +47,7 @@ public class VendasController {
             model.vender(sessao, ing);
 
         }else{
-            System.out.println("erro");
+            aviso.message("Digite um numero de ingressos valido e selecione um sessão ");
         }
         view.setInicio();
            
@@ -70,6 +73,7 @@ public class VendasController {
             for(int i = 0;i<sessoes.size();i++){
                   relatorio.insere(sessoes.get(i), vendidos.get(i));
             }
+            aviso.message("Relatório gerado com sucesso");
         
             
         
