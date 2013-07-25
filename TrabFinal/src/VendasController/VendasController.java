@@ -66,6 +66,7 @@ public class VendasController {
         }else{
             System.out.println("erro");
         }
+        view.setInicio();
            
     }
 
