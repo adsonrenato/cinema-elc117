@@ -12,12 +12,15 @@ import SalasModel.ArquivoSala;
  */
 public class CadSessao {
     
-    ArquivoSessao arquivo = new ArquivoSessao();
-    ArquivoSala arquivo_sala = new ArquivoSala();
-    ArrayList<String> salas = new ArrayList<>();
-    ArrayList<Integer> ingressos = new ArrayList<>();
-    ArrayList<String> sessoes = new ArrayList<>();
-    ArrayList<Integer> lotacao = new ArrayList<>();
+    private ArquivoSessao arquivo = new ArquivoSessao();
+    private ArquivoSala arquivo_sala = new ArquivoSala();
+    
+    private ArrayList<String> salas = new ArrayList<>();
+    private ArrayList<Integer> ingressos = new ArrayList<>();
+    private ArrayList<Integer> vendidos = new ArrayList<>();
+    
+    private ArrayList<String> sessoes = new ArrayList<>();
+    private ArrayList<Integer> lotacao = new ArrayList<>();
     
     public void zeraarray(){
         for(int i=0;i>sessoes.size();i++){
@@ -30,6 +33,7 @@ public class CadSessao {
         int i;
         salas = arquivo_sala.lerSalas();
         ingressos = arquivo_sala.lerVagas();
+        vendidos = arquivo.lerVendidos();
         int ingresso = 0;
         
         arquivo.criaarquivo();
@@ -39,23 +43,22 @@ public class CadSessao {
         
         if(!verifica_existe(sessao)){
             sessoes.add(sessao);
-        }
-        
-        arquivo.zera();
-        
-        for(i = 0; i < lotacao.size(); i++){
-            arquivo.insere(sessoes.get(i), lotacao.get(i));
-        }
-        
-        for(i = 0; i < salas.size(); i++){
-            if(salas.get(i).equals(sala)){
-                ingresso = ingressos.get(i);
-                break;
+            
+            arquivo.zera();
+
+            for(i = 0; i < lotacao.size(); i++){
+                arquivo.insere(sessoes.get(i), lotacao.get(i), vendidos.get(i));
             }
+
+            for(i = 0; i < salas.size(); i++){
+                if(salas.get(i).equals(sala)){
+                    ingresso = ingressos.get(i);
+                    break;
+                }
+            }
+
+            arquivo.insere(sessao, ingresso, 0);
         }
-        
-        arquivo.insere(sessao, ingresso);
-        
     }
     
     public boolean verifica_existe(String sessao){
@@ -65,5 +68,4 @@ public class CadSessao {
         
         return false;
     }
-    
 }
