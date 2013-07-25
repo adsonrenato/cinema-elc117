@@ -198,7 +198,7 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
     private void cadastroButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButton1ActionPerformed
-        controller.cadastrar((String) salasBox.getSelectedItem(),filmeTextField.getText(),dataTextField.getText(),horaTextField.getText());
+        controller.cadastrar((String)salasBox.getSelectedItem(),filmeTextField.getText(),dataTextField.getText(),horaTextField.getText());
     }//GEN-LAST:event_cadastroButton1ActionPerformed
 
     private void salasBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salasBoxActionPerformed
