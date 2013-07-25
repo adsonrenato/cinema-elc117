@@ -6,6 +6,7 @@ package VendasView;
 
 import ThreadController.ThreadController;
 import VendasController.VendasController;
+import VendasModel.Vendas;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 
@@ -16,6 +17,7 @@ public class VendasJFrame extends javax.swing.JFrame {
 
      private ThreadController controllerThread = null;
      private VendasController controllerVendas = null; 
+     private Vendas model = null;
      
     /**
      * Creates new form VendasJFrame
@@ -25,7 +27,8 @@ public class VendasJFrame extends javax.swing.JFrame {
         initComponents();
         controllerThread = new ThreadController(this);
         controllerThread.runThread();
-        controllerVendas = new VendasController(this, null);
+        model = new Vendas();
+        controllerVendas = new VendasController(this, model);
         controllerVendas.addComboBox();
         setTitle("Venda de Ingressos");
       //  bannerButton.
@@ -34,10 +37,10 @@ public class VendasJFrame extends javax.swing.JFrame {
     
     
     public JButton getJbutton(int IdtoRun){
-    if (IdtoRun ==0){
-        return bannerButton;
-        
-    }
+        if (IdtoRun ==0){
+            return bannerButton;
+
+        }
        return null;
     }
     
@@ -45,6 +48,9 @@ public class VendasJFrame extends javax.swing.JFrame {
         return sessoesBox;
     }
 
+    public JComboBox getSessaoBox(){
+        return sessoesBox;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
