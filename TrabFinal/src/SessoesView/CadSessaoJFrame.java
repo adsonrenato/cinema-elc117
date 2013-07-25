@@ -55,6 +55,12 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Cadastrar nova sessão");
 
+        salasBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salasBoxActionPerformed(evt);
+            }
+        });
+
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel2.setText("Nome do Filme :");
 
@@ -191,6 +197,10 @@ public class CadSessaoJFrame extends javax.swing.JFrame {
     private void cadastroButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButton1ActionPerformed
         controller.cadastrar((String) salasBox.getSelectedItem(),filmeTextField.getText(),dataTextField.getText(),horaTextField.getText());
     }//GEN-LAST:event_cadastroButton1ActionPerformed
+
+    private void salasBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salasBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_salasBoxActionPerformed
 
     /**
      * @param args the command line arguments
