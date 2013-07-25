@@ -50,8 +50,8 @@ public class VendasController {
             
             for(i = 0; i < sessoes.size(); i++){
                 if(sessoes.get(i).equals(sessao)){
-                    if(lotacao.get(i) >= ing){
-                        lotacao.set(i, lotacao.get(i)-ing);
+                    if(lotacao.get(i) >= vendidos.get(i)+ing){
+                        vendidos.set(i, vendidos.get(i)+ing);
             
                         arquivo_sessoes.zera();
 
