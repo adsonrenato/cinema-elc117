@@ -104,7 +104,7 @@ public class ArquivoSessao {
         return lotacao;
        }
        
-       public ArrayList<Integer> lervendidos(){
+       public ArrayList<Integer> lerVendidos(){
        
            ArrayList<Integer> ingressos = new ArrayList<>();
         
