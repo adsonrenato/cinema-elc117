@@ -4,6 +4,7 @@
  */
 package VendasController;
 
+import VendasModel.ArquivoRelatorio;
 import Main.Avisos;
 import SessoesModel.ArquivoSessao;
 import TelaInicialView.TelaInicialJFrame;
@@ -11,8 +12,6 @@ import VendasModel.Vendas;
 import VendasView.VendasJFrame;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JComboBox;
 
 /**
@@ -122,6 +121,7 @@ public class VendasController {
     
     public void abrirRelatorio(){
         try { 
+            //tentamos usar o LibreOffice para ficar algo multi SO mas não obtivemos sucesso,logo se for gerar relatorio no linux talvez ocorram mensagens de erro
             Runtime.getRuntime().exec("notepad relatorio.csv");
         } catch (IOException ex) {
             ex.printStackTrace();
