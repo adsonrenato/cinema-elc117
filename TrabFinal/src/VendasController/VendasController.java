@@ -58,16 +58,29 @@ public class VendasController {
     }
 
     public void addComboBoxFilmes(){
+        int i,j;
         JComboBox filmeBox;
         ArrayList<String> filmelist = new ArrayList<>();
-        
+        ArrayList<String> aux = new ArrayList<>();
+
         filmeBox = view.getfilmeBox();
         filmelist = arquivo_sessoes.lerFilmes();
-        for(int i = 0;i<filmelist.size();i++){
-            filmeBox.addItem(filmelist.get(i));
         
-       }
-    
+        for(i = 0; i < filmelist.size(); i++){
+            for(j = 0; j < aux.size(); j++){
+                if(filmelist.get(i).equals(aux.get(j))){
+                    j = -1;
+                    break;
+                }
+            }
+            if(j != -1){
+                aux.add(filmelist.get(i));
+            }
+        }
+        
+        for(i = 0; i < aux.size(); i++){
+            filmeBox.addItem(aux.get(i));
+        }
     }
     
     public void addComboBoxSessoes(String filme){
