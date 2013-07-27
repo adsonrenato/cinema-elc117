@@ -34,7 +34,8 @@ public class ArquivoRelatorio {
           try{  
             FileWriter fw = new FileWriter( arquivo, false );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write("");
+            bw.write("Filme,Sessão,Ingressos Vendidos");
+            bw.newLine();
             bw.close();
             fw.close();
        }catch(IOException e){
@@ -44,12 +45,12 @@ public class ArquivoRelatorio {
          
      
      
-     public void insere(String sessao,int ingressos){
+     public void insere(String filme, String sessao,int ingressos){
        try{
             
             FileWriter fw = new FileWriter( arquivo, true );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write(sessao+","+ingressos);
+            bw.write(filme+","+sessao+","+ingressos);
             bw.newLine();
             bw.close();
             fw.close();

@@ -21,6 +21,7 @@ public class CadSessao {
     private ArrayList<Integer> ingressos = new ArrayList<>();
     private ArrayList<Integer> vendidos = new ArrayList<>();
     
+    private ArrayList<String> filmes = new ArrayList<>();
     private ArrayList<String> sessoes = new ArrayList<>();
     private ArrayList<Integer> lotacao = new ArrayList<>();
     
@@ -31,7 +32,7 @@ public class CadSessao {
         }
     }
     
-    public void adicionarSessao(String sessao, String sala){
+    public void adicionarSessao(String filme,String sessao, String sala){
         int i;
         salas = arquivo_sala.lerSalas();
         ingressos = arquivo_sala.lerVagas();
@@ -40,6 +41,8 @@ public class CadSessao {
         
         arquivo.criaarquivo();
         zeraarray();
+        
+        filmes = arquivo.lerFilmes();
         sessoes = arquivo.lerSessoes();
         lotacao = arquivo.lerlotacao();
         
@@ -49,7 +52,7 @@ public class CadSessao {
             arquivo.zera();
 
             for(i = 0; i < lotacao.size(); i++){
-                arquivo.insere(sessoes.get(i), lotacao.get(i), vendidos.get(i));
+                arquivo.insere(filmes.get(i),sessoes.get(i), lotacao.get(i), vendidos.get(i));
             }
 
             for(i = 0; i < salas.size(); i++){
@@ -59,7 +62,7 @@ public class CadSessao {
                 }
             }
 
-            arquivo.insere(sessao, ingresso, 0);
+            arquivo.insere(filme,sessao, ingresso, 0);
             aviso.message("Sessão cadastrada com sucesso");
         }else{
             aviso.message("Essa sessão já esta cadastrada");

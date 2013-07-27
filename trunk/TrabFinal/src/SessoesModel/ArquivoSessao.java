@@ -47,12 +47,12 @@ public class ArquivoSessao {
          
      }
      
-     public void insere(String sessao, int ingressos,int vendidos){
+     public void insere(String filme,String sessao, int ingressos,int vendidos){
        try{
             
             FileWriter fw = new FileWriter( arquivo, true );
             BufferedWriter bw = new BufferedWriter( fw );
-            bw.write(sessao+","+ingressos+","+vendidos);
+            bw.write(filme+","+sessao+","+ingressos+","+vendidos);
             bw.newLine();
             bw.close();
             fw.close();
@@ -61,17 +61,38 @@ public class ArquivoSessao {
        }
     }
      
-       public ArrayList<String> lerSessoes(){
-        ArrayList<String> sessao = new ArrayList<>();
+       public ArrayList<String> lerFilmes(){
+        ArrayList<String> filmes = new ArrayList<>();
         try{
-              String array [] = new String[3];
+              String array [] = new String[4];
               
               FileReader fr = new FileReader( arquivo );
               BufferedReader br = new BufferedReader( fr );
                 while( br.ready() ){
                     String linha = br.readLine();
                     array = linha.split(",");
-                    sessao.add(array[0]);    
+                    filmes.add(array[0]);    
+                }
+  
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
+        return filmes;
+       }
+       
+     
+       public ArrayList<String> lerSessoes(){
+        ArrayList<String> sessao = new ArrayList<>();
+        try{
+              String array [] = new String[4];
+              
+              FileReader fr = new FileReader( arquivo );
+              BufferedReader br = new BufferedReader( fr );
+                while( br.ready() ){
+                    String linha = br.readLine();
+                    array = linha.split(",");
+                    sessao.add(array[1]);    
                 }
   
         }catch(IOException e){
@@ -86,14 +107,14 @@ public class ArquivoSessao {
            ArrayList<Integer> lotacao = new ArrayList<>();
         
         try{
-              String array [] = new String[3];
+              String array [] = new String[4];
               Integer vagas;
               FileReader fr = new FileReader( arquivo );
               BufferedReader br = new BufferedReader( fr );
                 while( br.ready() ){
                     String linha = br.readLine();
                     array = linha.split(",");
-                    vagas = Integer.parseInt(array[1]);
+                    vagas = Integer.parseInt(array[2]);
                     lotacao.add(vagas);    
                 }
               
@@ -109,14 +130,14 @@ public class ArquivoSessao {
            ArrayList<Integer> ingressos = new ArrayList<>();
         
         try{
-              String array [] = new String[3];
+              String array [] = new String[4];
               Integer vendidos;
               FileReader fr = new FileReader( arquivo );
               BufferedReader br = new BufferedReader( fr );
                 while( br.ready() ){
                     String linha = br.readLine();
                     array = linha.split(",");
-                    vendidos = Integer.parseInt(array[2]);
+                    vendidos = Integer.parseInt(array[3]);
                     ingressos.add(vendidos);    
                 }
               
@@ -126,6 +147,10 @@ public class ArquivoSessao {
         
         return ingressos;
        }
+       
+       
+
+       
        
     
 }
