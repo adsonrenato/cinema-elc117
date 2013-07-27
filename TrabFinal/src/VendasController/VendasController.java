@@ -9,7 +9,10 @@ import SessoesModel.ArquivoSessao;
 import TelaInicialView.TelaInicialJFrame;
 import VendasModel.Vendas;
 import VendasView.VendasJFrame;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
 
 /**
@@ -21,6 +24,7 @@ public class VendasController {
     private ArquivoRelatorio relatorio = new ArquivoRelatorio();
     private Avisos aviso = new Avisos();
     
+    private ArrayList<String> filmes = new ArrayList<>();
     private ArrayList<String> sessoes = new ArrayList<>();
     private ArrayList<Integer> vendidos = new ArrayList<>();
     
@@ -38,44 +42,77 @@ public class VendasController {
         inicio.setVisible(true);
     }
     
-    public void vender(String sessao, String ingressos){
+    public void vender(String filme,String sessao, String ingressos){
         int ing;
         
-        if(!ingressos.equals("") && !ingressos.equals("0") && !sessao.equals("Sessões")){
+        if(!ingressos.equals("") && !ingressos.equals("0") && !sessao.equals("Sessões") && !filme.equals("Filmes")){
             ing = Integer.parseInt(ingressos);
             System.out.println(ing);
             model.vender(sessao, ing);
 
         }else{
-            aviso.message("Digite um numero de ingressos valido e selecione um sessão ");
+            aviso.message("Digite um numero de ingressos valido e selecione um filme e uma sessão ");
         }
         view.setInicio();
            
     }
 
-    public void addComboBox(){
-        JComboBox salaBox;
-        ArrayList<String> sessaolist = new ArrayList<>();
+    public void addComboBoxFilmes(){
+        JComboBox filmeBox;
+        ArrayList<String> filmelist = new ArrayList<>();
         
-        salaBox = view.getSessoesBox();
-        sessaolist = arquivo_sessoes.lerSessoes();
-        for(int i = 0;i<sessaolist.size();i++){
-            salaBox.addItem(sessaolist.get(i));
+        filmeBox = view.getfilmeBox();
+        filmelist = arquivo_sessoes.lerFilmes();
+        for(int i = 0;i<filmelist.size();i++){
+            filmeBox.addItem(filmelist.get(i));
         
        }
     
     }
+    
+    public void addComboBoxSessoes(String filme){
+        JComboBox sessoesBox;
+        sessoesBox = view.getsessoesBox();
+        sessoesBox.removeAllItems();
+        sessoesBox.addItem("Sessões");
+        
+        ArrayList<String> sessoeslist = new ArrayList<>();
+        ArrayList<String> filmelist = new ArrayList<>();
+        
+        sessoeslist = arquivo_sessoes.lerSessoes();
+        filmelist = arquivo_sessoes.lerFilmes();
+        
+        for(int i = 0; i< sessoeslist.size();i++){
+            if(filmelist.get(i).equals(filme)){
+               sessoesBox.addItem(sessoeslist.get(i));
+            }
+        }
+        
+    }
+    
     public void relatorio(){
+            filmes = arquivo_sessoes.lerFilmes();
             sessoes = arquivo_sessoes.lerSessoes();
             vendidos = arquivo_sessoes.lerVendidos();
             relatorio.criaarquivo();
             relatorio.zeraRelatorio();
             for(int i = 0;i<sessoes.size();i++){
-                  relatorio.insere(sessoes.get(i), vendidos.get(i));
+                  relatorio.insere(filmes.get(i), sessoes.get(i), vendidos.get(i));
             }
+
             aviso.message("Relatório gerado com sucesso");
+            abrirRelatorio();
         
             
+        
+    }
+    
+    public void abrirRelatorio(){
+        try { 
+            Runtime.getRuntime().exec("notepad relatorio.csv");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
         
     }
     
