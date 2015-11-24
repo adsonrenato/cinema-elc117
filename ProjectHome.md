@@ -1,0 +1,1 @@
+Neste projeto desenvolveremos um gerenciador de cinemas para a matéria de Paradigmas da Programação ,utilizando orientação a objeto em java
